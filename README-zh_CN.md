@@ -4,12 +4,17 @@
 [![文档状态](https://img.shields.io/website?url=https%3A%2F%2Fnxtkb.com%2Fzh%2Fdocs%2Fsetup%2Fkeymap%2Fferris-sweep-keymap%2F&label=docs&up_message=online&up_color=2f6f6f&down_message=offline&down_color=8b1e3f&style=flat-square)](https://nxtkb.com/zh/docs/setup/keymap/ferris-sweep-keymap/)
 [![键位源码](https://img.shields.io/badge/keymap-cradio.keymap-5f6fbf?style=flat-square)](./config/cradio.keymap)
 [![ZMK 配置](https://img.shields.io/badge/ZMK-cradio.conf-6b7280?style=flat-square)](./config/cradio.conf)
+[![ZMK Studio](https://img.shields.io/badge/ZMK-Studio-8b5cf6?style=flat-square)](https://zmk.studio/)
+[![键鼠测试](https://img.shields.io/website?url=https%3A%2F%2Finput-test.nxtkb.com%2F&label=input%20tester&up_message=online&up_color=2f6f6f&down_message=offline&down_color=8b1e3f&style=flat-square)](https://input-test.nxtkb.com/)
 
 中文 | [English](./README.md)
 
-这个仓库保存 NXTKB Ferris Sweep 的 ZMK 固件配置。需要查看源码、fork
-配置或构建固件时，从这里开始；上手、刷写、键位图和日常使用说明，优先看
-NXTKB 官方文档。
+这个仓库保存 NXTKB Ferris Sweep 的 ZMK 固件配置。它基于
+[Sweep](https://github.com/davidphilipbarr/Sweep) 布局，使用
+[ZMK](https://github.com/zmkfirmware/zmk) 构建，并在固件支持时可通过
+[ZMK Studio](https://zmk.studio/) 实时改键。需要查看源码、fork 配置或
+构建固件时，从这里开始；上手、刷写、键位图和日常使用说明，优先看 NXTKB
+官方文档。
 
 ## 官方文档
 
@@ -33,6 +38,18 @@ NXTKB 官方文档。
 - `config/cradio.conf`：这个键盘的 ZMK 配置选项。
 - `build.yaml`：GitHub Actions 固件构建矩阵。
 - `.github/workflows/build.yml`：复用 ZMK 用户配置构建流程的固件构建工作流。
+
+## 固定依赖
+
+[![ZMK revision](https://img.shields.io/badge/zmk-8feeb52-5f6fbf?style=flat-square)](https://github.com/zmkfirmware/zmk/tree/8feeb52)
+[![zmk-behavior-report revision](https://img.shields.io/badge/zmk--behavior--report-476f43da-2f6f6f?style=flat-square)](https://github.com/nxtkb/zmk-behavior-report/tree/476f43da1f98b4a6150c9c0e499a257bd64a29a0)
+
+固件构建依赖由 `config/west.yml` 固定：
+
+| 项目 | 远端 | Revision |
+| :--- | :--- | :--- |
+| `zmk` | `zmkfirmware/zmk` | `8feeb52` |
+| `zmk-behavior-report` | `nxtkb/zmk-behavior-report` | `476f43da1f98b4a6150c9c0e499a257bd64a29a0` |
 
 ## 固件和改键流程
 
@@ -82,9 +99,3 @@ NXTKB 官方文档。
 如果只改了按键或键盘名称，通常只需要刷左手。如果改到分体行为、板级配置或
 右手行为，也要刷受影响的半边。刷写前请先看官网的
 [如何刷写固件](https://nxtkb.com/zh/docs/firmware/how-to-flash-a-firmware/)。
-
-## 参考
-
-- [Sweep](https://github.com/davidphilipbarr/Sweep)
-- [ZMK](https://github.com/zmkfirmware/zmk)
-- [ZMK Studio 文档](https://zmk.dev/docs/features/studio)

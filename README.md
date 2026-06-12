@@ -4,13 +4,18 @@
 [![Docs Status](https://img.shields.io/website?url=https%3A%2F%2Fnxtkb.com%2Fdocs%2Fsetup%2Fkeymap%2Fferris-sweep-keymap%2F&label=docs&up_message=online&up_color=2f6f6f&down_message=offline&down_color=8b1e3f&style=flat-square)](https://nxtkb.com/docs/setup/keymap/ferris-sweep-keymap/)
 [![Keymap Source](https://img.shields.io/badge/keymap-cradio.keymap-5f6fbf?style=flat-square)](./config/cradio.keymap)
 [![ZMK Config](https://img.shields.io/badge/ZMK-cradio.conf-6b7280?style=flat-square)](./config/cradio.conf)
+[![ZMK Studio](https://img.shields.io/badge/ZMK-Studio-8b5cf6?style=flat-square)](https://zmk.studio/)
+[![Input Tester](https://img.shields.io/website?url=https%3A%2F%2Finput-test.nxtkb.com%2F&label=input%20tester&up_message=online&up_color=2f6f6f&down_message=offline&down_color=8b1e3f&style=flat-square)](https://input-test.nxtkb.com/)
 
 [中文](./README-zh_CN.md) | English
 
 This repository contains the ZMK firmware configuration for the NXTKB Ferris
-Sweep keyboard. Use it to inspect, fork, and build firmware. For setup,
-flashing, keymap diagrams, and day-to-day usage notes, start with the public
-NXTKB docs.
+Sweep keyboard. It is based on the [Sweep](https://github.com/davidphilipbarr/Sweep)
+layout, builds with [ZMK](https://github.com/zmkfirmware/zmk), and supports
+[ZMK Studio](https://zmk.studio/) for live keymap edits when the firmware
+enables it. Use this repository to inspect, fork, and build firmware. For
+setup, flashing, keymap diagrams, and day-to-day usage notes, start with the
+public NXTKB docs.
 
 ## Official Docs
 
@@ -36,6 +41,18 @@ Chinese docs are also available:
 - `build.yaml`: GitHub Actions build matrix for generated firmware artifacts.
 - `.github/workflows/build.yml`: firmware build workflow that reuses ZMK's
   user config build.
+
+## Pinned Dependencies
+
+[![ZMK revision](https://img.shields.io/badge/zmk-8feeb52-5f6fbf?style=flat-square)](https://github.com/zmkfirmware/zmk/tree/8feeb52)
+[![zmk-behavior-report revision](https://img.shields.io/badge/zmk--behavior--report-476f43da-2f6f6f?style=flat-square)](https://github.com/nxtkb/zmk-behavior-report/tree/476f43da1f98b4a6150c9c0e499a257bd64a29a0)
+
+The firmware build is pinned through `config/west.yml`:
+
+| Project | Remote | Revision |
+| :--- | :--- | :--- |
+| `zmk` | `zmkfirmware/zmk` | `8feeb52` |
+| `zmk-behavior-report` | `nxtkb/zmk-behavior-report` | `476f43da1f98b4a6150c9c0e499a257bd64a29a0` |
 
 ## Firmware and Keymap Workflow
 
@@ -87,9 +104,3 @@ flash the left half. If you changed split behavior, board settings, or
 right-half behavior, flash the affected half as well. See
 [How to Flash Firmware](https://nxtkb.com/docs/firmware/how-to-flash-a-firmware/)
 before updating a board.
-
-## References
-
-- [Sweep](https://github.com/davidphilipbarr/Sweep)
-- [ZMK](https://github.com/zmkfirmware/zmk)
-- [ZMK Studio docs](https://zmk.dev/docs/features/studio)
