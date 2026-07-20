@@ -67,9 +67,9 @@
         ht_z: ht_z {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -77,29 +77,29 @@
         ht_d: ht_d {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
 
-        // Tap for RU Dot (.) / FSLH, Hold for RU ю / DOT
+        // Tap for RU б (COMMA), Hold for RU Dot (FSLH)
         ht_dot: ht_dot {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
 
-        // Tap for RU Comma (,) / LS(FSLH), Hold for RU б / COMMA
+        // Tap for RU ю (DOT), Hold for RU Comma (LS(FSLH))
         ht_comma: ht_comma {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -110,7 +110,7 @@
         };
         msc {
             acceleration-exponent = <0>;    // 0
-            time-to-max-speed-ms = <40>;    // 500
+            time-to-max-speed-ms = ;    // 500
             delay-ms = <0>;                 // 10
         };
     };
@@ -132,7 +132,7 @@
             bindings = <
                 &kp Q        &kp W          &kp E          &kp R          &kp T          &kp Y          &kp U          &kp I                    &kp O                    &kp P
                 &kp A        &ht LALT S     &ht LCTRL D    &ht LGUI F     &kp G          &kp H          &ht RGUI J     &ht RCTRL K              &ht RALT L               &kp BSPC
-                &kp Z        &kp X          &kp C          &kp V          &kp B          &kp N          &kp M          &ht_comma COMMA LS(FSLH) &ht_dot DOT FSLH         &kp ENTER
+                &kp Z        &kp X          &kp C          &kp V          &kp B          &kp N          &kp M          &ht_comma LS(FSLH) COMMA &ht_dot FSLH DOT         &kp ENTER
                                             &lt LEF TAB    &kp LSHIFT                    &kp SPACE      &lt RIG TAB
             >;
         };
@@ -142,7 +142,7 @@
             bindings = <
                 &kp Q        &kp W          &kp E          &kp R          &kp T          &kp Y          &kp U          &kp I                    &kp O                    &kp P
                 &kp A        &ht LALT S     &ht LGUI D     &ht LCTRL F    &kp G          &kp H          &ht RCTRL J    &ht RGUI K               &ht RALT L               &kp BSPC
-                &kp Z        &kp X          &kp C          &kp V          &kp B          &kp N          &kp M          &ht_comma COMMA LS(FSLH) &ht_dot DOT FSLH         &kp ENTER
+                &kp Z        &kp X          &kp C          &kp V          &kp B          &kp N          &kp M          &ht_comma LS(FSLH) COMMA &ht_dot FSLH DOT         &kp ENTER
                                             &lt LEF TAB    &kp LSHIFT                    &kp SPACE      &lt RIG TAB
             >;
         };
