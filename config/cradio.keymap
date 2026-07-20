@@ -151,8 +151,8 @@
             display-name = "SYMBOL";
             bindings = <
                 &kp EXCL     &kp AT         &kp HASH       &kp DLLR       &kp PRCNT      &kp CARET      &kp AMPS       &kp ASTRK                  &kp GRAVE                  &ht_z RBKT LBKT
-                &kp DQT      &kp SQT        &kp LBRC       &kp LPAR       &default_report &kp FSLH      &kp MINUS      &kp EQUAL                  &kp COLON                  &kp SEMI
-                &kp SQT      &kp RBKT       &kp RBRC       &kp RPAR       &bootloader    &kp BSLH       &kp UNDER      &kp PLUS                   &kp PIPE                   &kp QMARK
+                &kp DQT      &kp SQT        &kp LPAR       &kp RPAR       &default_report &kp FSLH      &kp MINUS      &kp EQUAL                  &kp COLON                  &kp SEMI
+                &kp SQT      &kp LBKT       &kp RBKT       &kp LBRC       &kp RBRC       &kp BSLH       &kp UNDER      &kp PLUS                   &kp PIPE                   &kp QMARK
                                             &trans         &trans                        &tog MOUSE     &trans
             >;
         };
